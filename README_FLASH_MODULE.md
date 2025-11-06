@@ -395,7 +395,7 @@ Cuando un usuario hace clic en "Reservar cita" desde un diseño Flash, se abre e
 ## Contacto y Soporte
 
 Para consultas técnicas sobre este módulo:
-- **Desarrollador**: MiniMax Agent
+- **Desarrollador**: David Erik García Arenas
 - **Proyecto**: Ink & Soul Tattoo Studio
 - **Fecha de implementación**: Noviembre 2025
 - **Versión**: 1.0.0
