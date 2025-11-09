@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: <<SITE_URL>>/sitemap.xml
+
+# Disallow sensitive areas (if any in future)
+Disallow: /admin/
+Disallow: /config/
+Disallow: /api/
+
+# Allow search engines to index images
+Allow: /assets/img/
+Allow: *.jpg
+Allow: *.jpeg
+Allow: *.png
+Allow: *.webp
+Allow: *.svg
+
+# Crawl-delay (optional, for polite crawling)
+Crawl-delay: 1

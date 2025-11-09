@@ -1,0 +1,21 @@
+# Definiciones de propietarios del código
+# Para más información, consulta: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Configuración de administrador
+/admin/** @owner1
+/docs/admin.md @owner1
+/docs/*admin* @owner1
+.github/ISSUE_TEMPLATE/admin_bug.md @owner1
+.github/labels.json @owner1
+
+# Código frontend
+/src/ @frontend-team
+
+# Workflows y configuración de GitHub
+/.github/ @devops-team
+
+# Documentación general
+/docs/ @docs-team
+
+# Todos los demás archivos
+* @team-leads

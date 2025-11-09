@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio — Tatuajes | Ink & Soul</title>
+    <meta name="description" content="Galería de tatuajes fineline y devocionales. Ver trabajos de Asunaah: diseños minimalistas, cover-ups y arte corporal contemporáneo.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Spectral:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    
+    <!-- Environment Variables -->
+    <script>
+        window.__ENV = window.__ENV || {
+            SUPABASE_URL: '<<SUPABASE_URL>>',
+            SUPABASE_ANON_KEY: '<<SUPABASE_ANON_KEY>>',
+            SITE_URL: window.location.origin
+        };
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    
+    <header class="site-header" role="banner">
+        <nav class="main-nav" role="navigation" aria-label="Navegación principal">
+            <div class="nav-container">
+                <a href="index.html" class="logo" aria-label="Ink & Soul - Inicio">
+                    <span class="logo-text">Ink & Soul</span>
+                    <span class="logo-subtitle">Asunaah</span>
+                </a>
+                
+                <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+                    <span class="sr-only">Abrir menú</span>
+                    <div class="hamburger"></div>
+                </button>
+                
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="about.html">Sobre Mí</a></li>
+                    <li><a href="portfolio.html" aria-current="page">Portfolio</a></li>
+                    <li><a href="booking.html">Reservar Cita</a></li>
+                    <li><a href="shop.html">Tienda</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content" role="main">
+        <section class="page-header">
+            <div class="container">
+                <h1>Portfolio</h1>
+                <p class="page-subtitle">Cada línea cuenta una historia, cada símbolo tiene propósito</p>
+            </div>
+        </section>
+
+        <section class="portfolio-controls">
+            <div class="container">
+                <div class="portfolio-filters">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="fineline">Fineline</button>
+                    <button class="filter-btn" data-filter="devotional">Devocional</button>
+                    <button class="filter-btn" data-filter="coverup">Cover-up</button>
+                    <button class="filter-btn" data-filter="minimalist">Minimalista</button>
+                </div>
+                
+                <div class="portfolio-search">
+                    <label for="search-input" class="sr-only">Buscar en portfolio</label>
+                    <input type="text" id="search-input" placeholder="Buscar por simbolo o descripción...">
+                </div>
+            </div>
+        </section>
+
+        <section class="portfolio-grid" id="portfolio-grid">
+            <div class="container">
+                <!-- Portfolio items will be loaded here -->
+                <div class="loading-spinner">
+                    <p>Cargando portfolio...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Modal -->
+        <div class="portfolio-modal" id="portfolio-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+            <div class="modal-overlay" id="modal-overlay"></div>
+            <div class="modal-content">
+                <button class="modal-close" aria-label="Cerrar modal">
+                    <span class="sr-only">Cerrar</span>
+                    ×
+                </button>
+                <div class="modal-body">
+                    <div class="modal-image">
+                        <img id="modal-image" src="" alt="">
+                    </div>
+                    <div class="modal-info">
+                        <h3 id="modal-title"></h3>
+                        <p id="modal-description"></p>
+                        <div class="modal-details">
+                            <span id="modal-category"></span>
+                            <span id="modal-date"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="portfolio-stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat">
+                        <div class="stat-number" id="total-works">0</div>
+                        <div class="stat-label">Obras Creadas</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number" id="satisfied-clients">0</div>
+                        <div class="stat-label">Clientes Satisfechas</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number" id="years-experience">10+</div>
+                        <div class="stat-label">Años de Experiencia</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="container">
+                <h2>Lo que dicen mis clientas</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial">
+                        <blockquote>
+                            <p>"Asunaah creó algo completamente único para mí. El proceso fue tan hermoso 
+                            como el resultado final. Cada detalle tiene significado."</p>
+                        </blockquote>
+                        <cite>— María L.</cite>
+                    </div>
+                    <div class="testimonial">
+                        <blockquote>
+                            <p>"Su técnica fineline es impecable. Transformó mi idea en algo aún mejor de 
+                            lo que había imaginado. Altamente recomendada."</p>
+                        </blockquote>
+                        <cite>— Carmen S.</cite>
+                    </div>
+                    <div class="testimonial">
+                        <blockquote>
+                            <p>"Me ayudó a cubrir un tatuaje anterior con algo mucho más hermoso. Su visión 
+                            artística es extraordinaria."</p>
+                        </blockquote>
+                        <cite>— Ana R.</cite>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>¿Listo para tu próxima pieza?</h2>
+                <p>Cada tatuaje cuenta una historia única. Trabajemos juntos para crear la tuya</p>
+                <a href="booking.html" class="btn btn-primary">Reservar Consulta</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Ink & Soul</h3>
+                    <p>Donde el arte devocional encuentra su hogar digital</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">Instagram</a>
+                        <a href="#" aria-label="Facebook">Facebook</a>
+                        <a href="#" aria-label="WhatsApp">WhatsApp</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="about.html">Sobre Mí</a></li>
+                        <li><a href="portfolio.html" aria-current="page">Portfolio</a></li>
+                        <li><a href="booking.html">Reservar Cita</a></li>
+                        <li><a href="shop.html">Tienda</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Información</h4>
+                    <ul>
+                        <li><a href="#">Proceso Creativo</a></li>
+                        <li><a href="#">Cuidados Posteriores</a></li>
+                        <li><a href="#">Preguntas Frecuentes</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ink & Soul — Asunaah. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/env.js"></script>
+    <script src="assets/js/supabase.client.js"></script>
+    <script src="assets/js/ui.components.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/portfolio.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
