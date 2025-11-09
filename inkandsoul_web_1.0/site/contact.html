@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto — Ink & Soul</title>
+    <meta name="description" content="Contacta con Asunaah para consultas sobre tatuajes devocionales, reservas y proyectos colaborativos.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Spectral:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    
+    <!-- Environment Variables -->
+    <script>
+        window.__ENV = window.__ENV || {
+            SUPABASE_URL: '<<SUPABASE_URL>>',
+            SUPABASE_ANON_KEY: '<<SUPABASE_ANON_KEY>>',
+            SITE_URL: window.location.origin
+        };
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    
+    <header class="site-header" role="banner">
+        <nav class="main-nav" role="navigation" aria-label="Navegación principal">
+            <div class="nav-container">
+                <a href="index.html" class="logo" aria-label="Ink & Soul - Inicio">
+                    <span class="logo-text">Ink & Soul</span>
+                    <span class="logo-subtitle">Asunaah</span>
+                </a>
+                
+                <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+                    <span class="sr-only">Abrir menú</span>
+                    <div class="hamburger"></div>
+                </button>
+                
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="about.html">Sobre Mí</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="booking.html">Reservar Cita</a></li>
+                    <li><a href="shop.html">Tienda</a></li>
+                    <li><a href="contact.html" aria-current="page">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content" role="main">
+        <section class="page-header">
+            <div class="container">
+                <h1>Contacto</h1>
+                <p class="page-subtitle">Estoy aquí para escucharte y crear algo único juntos</p>
+            </div>
+        </section>
+
+        <section class="contact-content">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2>Información de Contacto</h2>
+                        
+                        <div class="contact-item">
+                            <h3>Estudio</h3>
+                            <p>
+                                <strong>Ink & Soul Studio</strong><br>
+                                <<Dirección del estudio>><br>
+                                <<Ciudad, País>>
+                            </p>
+                        </div>
+
+                        <div class="contact-item">
+                            <h3>Horarios</h3>
+                            <p>
+                                <strong>Martes - Viernes:</strong> 11:00 - 19:00<br>
+                                <strong>Sábado:</strong> 10:00 - 16:00<br>
+                                <strong>Domingo - Lunes:</strong> Cerrado
+                            </p>
+                        </div>
+
+                        <div class="contact-item">
+                            <h3>Contacto Directo</h3>
+                            <p>
+                                <strong>Email:</strong> <a href="mailto:<<email-contacto>>"><<email-contacto>></a><br>
+                                <strong>WhatsApp:</strong> <a href="https://wa.me/<<numero-whatsapp>>">+<<número>></a><br>
+                                <strong>Teléfono:</strong> <a href="tel:<<numero-telefono>>">+<<número>></a>
+                            </p>
+                        </div>
+
+                        <div class="contact-item">
+                            <h3>Redes Sociales</h3>
+                            <div class="social-links">
+                                <a href="https://instagram.com/<<instagram>>" target="_blank" rel="noopener">Instagram</a>
+                                <a href="https://facebook.com/<<facebook>>" target="_blank" rel="noopener">Facebook</a>
+                                <a href="https://pinterest.com/<<pinterest>>" target="_blank" rel="noopener">Pinterest</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <h3>Políticas Importantes</h3>
+                            <ul>
+                                <li>Edad mínima: 18 años</li>
+                                <li>Depósito requerido para reservas</li>
+                                <li>Cancelación con 48h de anticipación</li>
+                                <li>Consultas sin compromiso</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container">
+                        <h2>Envíame un Mensaje</h2>
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-group">
+                                <label for="contact-name">Nombre completo *</label>
+                                <input type="text" id="contact-name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email">Email *</label>
+                                <input type="email" id="contact-email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-phone">Teléfono</label>
+                                <input type="tel" id="contact-phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-subject">Asunto *</label>
+                                <select id="contact-subject" name="subject" required>
+                                    <option value="">Selecciona un asunto</option>
+                                    <option value="booking">Consulta de reserva</option>
+                                    <option value="portfolio">Pregunta sobre portfolio</option>
+                                    <option value="process">Proceso creativo</option>
+                                    <option value="collaboration">Colaboración</option>
+                                    <option value="other">Otro</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-message">Mensaje *</label>
+                                <textarea id="contact-message" name="message" rows="5" required 
+                                    placeholder="Cuéntame sobre tu proyecto, idea o consulta..."></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="newsletter" value="yes">
+                                    <span class="checkmark"></span>
+                                    Quiero recibir noticias sobre nuevos trabajos y ofertas especiales
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">Enviar Mensaje</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container">
+                <h2>Preguntas Frecuentes</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3>¿Cuánto tiempo de anticipación necesito para reservar?</h3>
+                        <p>Dependiendo de mi disponibilidad, puedes reservar desde 2 semanas hasta 3 meses de anticipación. Para consultas, puedo agendar dentro de una semana.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>¿Trabajas solo con citas o también walk-ins?</h3>
+                        <p>Trabajo exclusivamente con citas programadas para asegurar la calidad y atención personalizada que cada cliente merece.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>¿Cuál es el precio promedio de un tatuaje?</h3>
+                        <p>Los precios varían según tamaño, complejidad y tiempo. Para una consulta personalizada, contáctame directamente para una cotización precisa.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>¿Qué formas de pago aceptas?</h3>
+                        <p>Acepto efectivo, tarjetas de débito y crédito, y transferencias bancarias. El depósito para reservar se puede hacer por cualquiera de estos métodos.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>¿Ofreces diseños personalizados?</h3>
+                        <p>Sí, todos mis trabajos son 100% personalizados. Cada diseño es único y creado específicamente para cada cliente basado en sus preferencias y significado.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>¿Qué cuidados necesito después de tatuarme?</h3>
+                        <p>Te proporcionaré instrucciones detalladas de cuidado después de cada sesión. Generalmente, incluye limpieza suave, hidratación y protección solar.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="location-section">
+            <div class="container">
+                <h2>Ubicación del Estudio</h2>
+                <div class="location-content">
+                    <div class="location-info">
+                        <h3>Cómo llegar</h3>
+                        <p>Nuestro estudio está ubicado en el corazón de la ciudad, fácilmente accesible en transporte público y con estacionamiento disponible.</p>
+                        
+                        <h3>Estacionamiento</h3>
+                        <p>Hay estacionamiento en la calle y un garage público a 2 cuadras del estudio.</p>
+                        
+                        <h3>Transporte Público</h3>
+                        <p>Líneas de bus: 10, 25, 45 | Metro: Estación Centro (línea A y B)</p>
+                    </div>
+                    <div class="location-map">
+                        <div class="map-placeholder">
+                            <p>Mapa de ubicación</p>
+                            <small>Aquí iría el mapa integrado de Google Maps</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Ink & Soul</h3>
+                    <p>Donde el arte devocional encuentra su hogar digital</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">Instagram</a>
+                        <a href="#" aria-label="Facebook">Facebook</a>
+                        <a href="#" aria-label="WhatsApp">WhatsApp</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="about.html">Sobre Mí</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="booking.html">Reservar Cita</a></li>
+                        <li><a href="shop.html">Tienda</a></li>
+                        <li><a href="contact.html" aria-current="page">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Información</h4>
+                    <ul>
+                        <li><a href="#">Proceso Creativo</a></li>
+                        <li><a href="#">Cuidados Posteriores</a></li>
+                        <li><a href="#">Preguntas Frecuentes</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ink & Soul — Asunaah. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/env.js"></script>
+    <script src="assets/js/supabase.client.js"></script>
+    <script src="assets/js/ui.components.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/contact.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
