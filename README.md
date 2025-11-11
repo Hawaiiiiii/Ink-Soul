@@ -1,11 +1,13 @@
 # 🖤 Ink & Soul by Asunaah
+<p align="center">
+<img width="800" height="521" alt="image" src="https://github.com/user-attachments/assets/b8ad0292-4fe7-47ca-a759-629fcd3bed6b" />
+</p>
 
 > Fineline · Sacred & Symbolic Tattooing
 
-Aplicación web full-stack profesional para artista tatuadora especializada en tatuaje devocional contemporáneo.
-
+<h1> Professional full-stack web application for a tattoo artist specializing in contemporary devotional tattooing. </h1>
+  
 ## ✨ Características
-
 ### 🎨 Frontend
 - **Diseño "Templo Digital Devocional"**: Estética dark premium con acentos dorados
 - **Multi-página (MPA)**: 6 páginas independientes con React Router
